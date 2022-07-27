@@ -6,6 +6,7 @@ const path = require('path');
 const fs = require('fs');
 const Photo = require('./models/Photo');
 
+
 const app = express();
 
 //connect DB
