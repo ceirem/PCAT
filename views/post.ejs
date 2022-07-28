@@ -26,8 +26,17 @@
         <img src=" <%= photo.image %>" class="img-fluid" alt="...">
       </div>
       <div class="row card text-center">
-        <h5 class="card-title"> <%= photo.title %></h6>
-        <p class="card-text"> <%= photo.description %> </p>
+        <div class="row">
+          <div class="col-md-8">
+            <h5 class="card-title"> <%= photo.title %></h6>
+              <p class="card-text"> <%= photo.description %> </p>
+          </div>
+          <div class="col-md-4 ms-auto">
+            <a href= "/photos/edit/<%= photo._id %> " class="btn btn-secondary rounded-pill">UPDATE</a>
+            <a type="button" class="btn btn-danger rounded-pill">DELETE</a>
+
+          </div>
+        </div>
       </div>
     </div>
 
