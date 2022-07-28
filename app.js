@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const methodOverride = require('method-override');
 const ejs = require('ejs');
-const photoController = require('./controllers/photoControllers')
-const pageController = require ('./controllers/pageController')
+const photoController = require('./controllers/photoControllers');
+const pageController = require('./controllers/pageController');
 const app = express();
 
 //connect DB
@@ -25,7 +25,7 @@ app.use(
 );
 
 //ROUTES
-app.get('/', photoController.getAllPhotos)
+app.get('/', photoController.getAllPhotos);
 app.get('/photos/:id', photoController.getPhoto);
 app.post('/photos', photoController.createPhoto);
 app.put('/photos/:id', photoController.updatePhoto);
@@ -33,9 +33,8 @@ app.delete('/photos/:id', photoController.deletePhoto);
 
 app.get('/about', pageController.getAboutPage);
 app.get('/add_post', pageController.getAddPostPage);
-app.get('/post',pageController.getPostPage);
+app.get('/post', pageController.getPostPage);
 app.get('/photos/edit/:id', pageController.getEditPage);
-
 
 const port = 3000;
 
